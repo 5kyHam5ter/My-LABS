@@ -3,18 +3,17 @@
 int main() {
     int number;
     int result;
+    int input_check;
     
     printf("Enter a number...");
-    scanf("%d", &number);
-    
+    input_check = scanf("%d", &number);
     result = number % 2;
-    
-    printf("result = %d, so...", result);
-    
-    if (result == 0) 
-    printf("\nNumber is chet!!");
-    else 
-    printf("\nOoops! Number is nechet");
-    
+    if (input_check !=1)
+    printf("Invalit input");
+    else
+        if (result == 0) 
+        printf("\nNumber is chet!!");
+        else 
+        printf("\nOoops! Number is nechet");
     return(0);
     }
