@@ -14,6 +14,7 @@ int main() {
     
     printf("Enter number A... ");
     input_check_a = scanf("%f", &a);
+    printf("%d", input_check_a);
 
     if (input_check_a !=1) {
     printf("Invalid input");
@@ -56,4 +57,4 @@ int main() {
 
 printf("\nNumber of pairs is... %d", cnt);
 return(0);
-    }
+}
