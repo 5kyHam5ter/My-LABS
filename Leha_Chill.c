@@ -1,15 +1,31 @@
 #include <stdio.h>
 
+#define BAD_INPUT 0
+#define GOOD_INPUT 1
+
+int check_input(int input);
 int main(void)
 {
     int module_option, submodule_option;
+    printf("Enter a number!");
+    int check_input(int module_option);
 
-    printf("Добро пожаловать в лабораторные работы!\n");
+    return 0;
+}
 
-    return lab_1();
-    return list_of_labs_menu();
-    return main_menu();
+int check_input(int input)
+{
+    if (scanf_s(&input) != 1)
+    {
+        printf("Некорректный ввод! Попробуйте еще раз!\n");
+        while (getchar() != '\n');
+        return BAD_INPUT;
+    }
+    return GOOD_INPUT;
+}
 
+int main_menu()
+{
     while (1)
     {
         printf("\nМеню\n");
@@ -18,155 +34,43 @@ int main(void)
         printf("3 - Получить ссылку на репозиторий\n");
         printf("0 - Выход\n");
         printf("Выберите опцию: ");
-        result = scanf_s("%d", &module_option);
-        if (result)
-        {
-            
-        }
-        switch (module_option)
-        {
-            case 0:
-            {
-                printf("Завершение программы. До свидания!\n");
-                return 0;
-            }
-            case 1:
-                list_of_labs();
-                break;
-
-            case 2:
-                while (1)
-                {
-                    printf("\nТЗ на лабораторные работы\n");
-                    printf("1 - Открыть .txt\n");
-                    printf("2 - Показать текстом в cmd\n");
-                    printf("0 - Назад\n");
-                    printf("Выберите опцию: ");
-                    scanf("%d", &submodule_option);
-
-                    if (submodule_option == 0)
-                        break;
-
-                    switch (submodule_option)
-                    {
-                    case 1:
-                        printf("[открытие .txt с ТЗ]\n");
-                        break;
-                    case 2:
-                        printf("[вывод ТЗ текстом в cmd]\n");
-                        break;
-                    default:
-                        printf("некорректный ввод\n");
-                        break;
-                    }
-                }
-                break;
-
-            case 3:
-                while (1)
-                {
-                    printf("\nСсылка на репозиторий\n");
-                    printf("1 - Открыть .txt\n");
-                    printf("2 - Показать текстом в cmd\n");
-                    printf("0 - Назад\n");
-                    printf("Выберите опцию: ");
-                    scanf("%d", &submodule_option);
-
-                    if (submodule_option == 0)
-                        break;
-
-                    switch (submodule_option)
-                    {
-                    case 1:
-                        printf("[открытие .txt со ссылкой]\n");
-                        break;
-                    case 2:
-                        printf("[вывод ссылки на репозиторий]\n");
-                        break;
-                    default:
-                        printf("некорректный ввод\n");
-                        break;
-                    }
-                }
-                break;
-
-            default:
-                printf("некорректный ввод\n");
-                break;
-        }
     }
 }
 
-void list_of_labs_output_list()
+int list_of_labs_menu()
 {
-        printf("\nСписок лабораторных работ\n");
-        printf("1 - Лабораторная работа №1\n");
-        printf("2 - Лабораторная работа №2\n");
-        printf("3 - Лабораторная работа №3\n");
-        printf("4 - Лабораторная работа №4\n");
-        dsadasd
-        printf("0 - Назад\n");
-        printf("Выберите опцию: ");
-        return;
-}
-
-int input()
-{
-    scanf("%d", &submodule_option);
-    printf("некорректный ввод\n");
-}
-void list_of_labs_menu()
-{
-    while (1)
+    while(1)
     {
-        list_of_labs_output_list();
-        
-        if (submodule_option == 0)
-            return;
-
-        switch (submodule_option)
-        {
-            case 1:
-            {
-                lab_1();
-                break;
-            }
-            case 2:
-            {
-                lab_1();
-                printf("запуск ЛР №2\n");
-                break;
-            }
-            case 3:
-            {
-                printf("[запуск ЛР №3]\n");
-                break;
-            }
-            case 4:
-            {
-                printf("[запуск ЛР №4]\n");
-                break;
-            }
-            case 5:
-            {
-                
-            }
-            default:
-            {
-                
-                break;
-            }
-        }
+        void lab1_code();
+        void lab2_code();
+        void lab3_code();
+        void lab4_code();
+        void lab5_code();
+        void lab6_code();
     }
 }
 
-void lab_1()
+void lab1_code()
 {
-    printf("запуск ЛР №1\n");
-     // TO DO: add lab 1 for this peas of sheet
+    printf("Код лабораторной работы номер 1\n");
 }
-void lab_5()
+void lab2_code()
 {
-    printf("запуск ЛР №1\n");
-     // TO DO: add lab 1 for this peas of sheet
+    printf("Код лабораторной работы номер 2\n");
+}
+void lab3_code()
+{
+    printf("Код лабораторной работы номер 3\n");
+}
+void lab4_code()
+{
+    printf("Код лабораторной работы номер 4\n");
+}
+void lab5_code()
+{
+    printf("Код лабораторной работы номер 5\n");
+}
+void lab6_code()
+{
+    printf("Код лабораторной работы номер 6\n");
 }
